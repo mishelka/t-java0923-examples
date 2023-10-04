@@ -27,7 +27,7 @@ public class NumberToText {
     }
 
     private static void writeNumber(int number){
-        switch(number){
+        switch(number) {
             case 1: System.out.print("one"); break;
             case 2: System.out.print("two"); break;
             case 3: System.out.print("three"); break;
