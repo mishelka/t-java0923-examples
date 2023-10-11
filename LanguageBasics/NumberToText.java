@@ -1,7 +1,7 @@
 //Test on inputs 234 and 2132
 public class NumberToText {
 	//TODO: Fix main method
-    public static void  main(String[] args){
+    public static void  main(String[] args) {
         int number = Integer.parseInt(args[0]);
 
         if(number >= 1000) {
@@ -26,7 +26,7 @@ public class NumberToText {
         }
     }
 
-    private static void writeNumber(int number){
+    private static void writeNumber(int number) {
         switch(number) {
             case 1: System.out.print("one"); break;
             case 2: System.out.print("two"); break;
