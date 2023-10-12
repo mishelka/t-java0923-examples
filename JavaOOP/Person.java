@@ -23,8 +23,10 @@ public class Person {
         return age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public boolean setAge(int wantedAge) {
+        boolean validAge = isValidAge(wantedAge);
+        if(validAge) this.age = wantedAge;
+        return validAge;
     }
 
     private boolean isValidAge(int ageNew) {
