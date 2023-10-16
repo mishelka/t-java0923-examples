@@ -12,7 +12,12 @@ public class PersonTest {
 
         Person p2 = new Person("Michael", "Jackson", 200);
 
-        //todo: Person p3 = new Person("Chester", "Bennington");
+        //pravy klik -> Generate -> Constructor...
+        //vytvorit konstruktor, ktory sa da takto pouzit:
+        Person p3 = new Person("Chester", "Bennington");
+
+        p3.setAge(38);
+        System.out.println(p3.getName() + " " + p3.getSurname() + ", " + p3.getAge());
 
 //        p2.setName("Michael");
 //        p2.setSurname("Jackson");

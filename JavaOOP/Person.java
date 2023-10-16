@@ -3,9 +3,13 @@ public class Person {
     private String surname;
     private int age;
 
-    public Person(String name, String surname, int age) {
+    public Person(String name, String surname) {
         this.name = name;
         this.surname = surname;
+    }
+
+    public Person(String name, String surname, int age) {
+        this(name, surname);
         setAge(age);
     }
 
