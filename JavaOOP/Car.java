@@ -8,8 +8,13 @@ public class Car {
     }
 
     public Car(String brand, String color) {
-        this.brand = brand;
+        this(brand);
         this.color = color;
+    }
+
+    public Car(String brand, String color, boolean started) {
+        this(brand, color);
+        this.started = started;
     }
 
     public String getBrand() {
