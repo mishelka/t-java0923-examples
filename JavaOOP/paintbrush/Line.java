@@ -26,7 +26,7 @@ public class Line extends Shape {
         String s = "";
         for (int i = 0; i < size; i++) {
 //            s = s + "*";
-            s += color;
+            s += super.color;
         }
         return s;
     }

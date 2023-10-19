@@ -1,7 +1,10 @@
+package cars;
+
 public class Car {
     private String brand;
     private String color;
     private boolean started = false;
+    private Person owner;
 
     public Car(String brand) {
         this.brand = brand;
@@ -39,5 +42,13 @@ public class Car {
 
     public void stop() {
         this.started = false;
+    }
+
+    public Person getOwner() {
+        return owner;
+    }
+
+    public void setOwner(Person owner) {
+        this.owner = owner;
     }
 }

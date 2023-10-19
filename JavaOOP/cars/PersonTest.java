@@ -1,12 +1,14 @@
+package cars;
+
 public class PersonTest {
     public static void main(String[] args) {
-        Person p = new Person("Miska", "Bacikova", 26); //Person p - premenna typu Person
-                                 // new Person(); - vytvorenie noveho objektu Person
-//        p.setName("Miska");
-//        p.setSurname("Bacikova");
-//        boolean ageWasSet = p.setAge(26);
+        Person m = new Person("Miska", "Bacikova", 26); //cars.Person m - premenna typu cars.Person
+                                 // new cars.Person(); - vytvorenie noveho objektu cars.Person
+//        m.setName("Miska");
+//        m.setSurname("Bacikova");
+//        boolean ageWasSet = m.setAge(26);
 //        System.out.println(ageWasSet ? "age is valid" : "age is invalid");
-        System.out.println(p.getName() + " " + p.getSurname() + ", " + p.getAge() + " ("
+        System.out.println(m.getName() + " " + m.getSurname() + ", " + m.getAge() + " ("
 //                        + (ageWasSet ? "age is valid" : "age is invalid") + ")"
         );
 
@@ -30,14 +32,17 @@ public class PersonTest {
         Car c = new Car("Toyota");
         c.setColor("red");
         c.start();
+        c.setOwner(m);
         System.out.println(c.getBrand() + ", " + c.getColor()
                 + ", " + c.isStarted());
+        System.out.println("owner: " + c.getOwner().getName());
 
         Car c2 = new Car("BMW", "blue");
         c2.start();
         c2.stop();
         System.out.println(c2.getBrand() + ", " + c2.getColor()
                 + ", " + c2.isStarted());
+        System.out.println(c2.getOwner());
 
         Car c3 = new Car("Jaguar", "red", true);
         System.out.println(c3.getBrand() + ", " + c3.getColor()

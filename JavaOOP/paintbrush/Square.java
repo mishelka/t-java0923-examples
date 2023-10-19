@@ -1,48 +1,20 @@
 package paintbrush;
 
-public class Square {
-    private char color = '*';
+public class Square extends Shape {
     private int size;
-    private int x;
-    private int y;
 
     public Square(int size) {
+        super(0, 0, '*');
         this.size = size;
     }
 
     public Square(char color, int size) {
-        this(size);
-        this.color = color;
+        this(color, size, 0, 0);
     }
 
     public Square(char color, int size, int x, int y) {
-        this(color, size);
-        this.x = x;
-        this.y = y;
-    }
-
-    public int getX() {
-        return x;
-    }
-
-    public void setX(int x) {
-        this.x = x;
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    public void setY(int y) {
-        this.y = y;
-    }
-
-    public char getColor() {
-        return color;
-    }
-
-    public void setColor(char color) {
-        this.color = color;
+        super(x, y, color);
+        this.size = size;
     }
 
     public int getSize() {
@@ -58,15 +30,15 @@ public class Square {
         String s = "";
 
         //x = 4 -> s += "\n\n\n\n"
-        for (int r = 0; r < x; r++) {
+        for (int r = 0; r < super.x; r++) {
             s += "\n";
         }
         for (int r = 0; r < size; r++) {
-            for (int c = 0; c < y; c++) {
+            for (int c = 0; c < super.y; c++) {
                 s += " ";
             }
             for (int c = 0; c < size; c++) {
-                s += color + "  ";
+                s += super.color + "  ";
             }
             s += "\n";
         }
