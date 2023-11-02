@@ -1,6 +1,8 @@
 package paintbrush;
 
 public class Square extends Shape {
+    public static final int DEFAULT_SIZE = 10;
+
     private int size;
 
     public Square(int size) {

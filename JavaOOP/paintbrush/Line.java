@@ -24,6 +24,13 @@ public class Line extends Shape {
     @Override
     public String toString() {
         String s = "";
+
+        for (int r = 0; r < super.x; r++) {
+            s += "\n";
+        }
+        for (int c = 0; c < super.y; c++) {
+            s += " ";
+        }
         for (int i = 0; i < size; i++) {
 //            s = s + "*";
             s += super.color;
