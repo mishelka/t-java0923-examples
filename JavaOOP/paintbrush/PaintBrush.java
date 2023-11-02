@@ -23,5 +23,22 @@ public class PaintBrush {
             System.out.println(shapes[i]);
             System.out.println();
         }
+
+        System.out.println(shapes[4].getClass()); //typ je Square
+        System.out.println(shapes.getClass()); //typ je pole Shapeov (Shape[])
+
+        Shape l = new Line(4);
+        Shape l2 = new Line(4);
+        Shape l3 = l;
+
+        System.out.println(l.hashCode());
+        System.out.println(l.equals(l2)); //false
+        System.out.println(l.equals(l3)); //true
+        System.out.println(l.getClass());
+
+        System.out.println(l instanceof Line); //true
+        System.out.println(l instanceof Shape); //true
+        System.out.println(l instanceof Object); //true
+        System.out.println(l instanceof Square); //false
     }
 }
