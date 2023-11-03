@@ -18,6 +18,6 @@ public class Bus extends Vehicle {
 
     @Override
     public String toString() {
-        return "Bus " + super.color + " " + super.brand + ", " + numberOfPassengers + " passengers";
+        return "Bus " + super.toString() + ", " + numberOfPassengers + " passengers";
     }
 }

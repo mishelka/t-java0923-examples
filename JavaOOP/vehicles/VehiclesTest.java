@@ -1,5 +1,7 @@
 package vehicles;
 
+import cars.Person;
+
 public class VehiclesTest {
     public static void main(String[] args) {
         //premenna vehicles je pole typu Vehicle[] (zoznam vozidiel)
@@ -20,6 +22,8 @@ public class VehiclesTest {
         Truck t = (Truck) v1;
         //na Vehicle sa neda spravit truck, ale po pretypovani na Truck uz mame k dispozicii tuto metodu:
         t.load("Nabytok");
+        t.start();
+        t.setOwner(new Person("Michaela", "Bacikova", 25));
 
         //v poli vehicles su referencie na objekty,
         // teda po zavolani funkcie load() sa aktualizuje dany objekt v tomto poli

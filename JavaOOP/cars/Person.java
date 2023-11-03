@@ -44,6 +44,11 @@ public class Person {
     private boolean isValidAge(int ageNew) {
         return ageNew >= 0 && ageNew <= 150;
     }
+
+    @Override
+    public String toString() {
+        return name + " " + surname + ", " + age;
+    }
 }
 
 //person.age = 300; TOTO NIE

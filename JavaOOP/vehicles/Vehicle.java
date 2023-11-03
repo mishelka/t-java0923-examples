@@ -2,7 +2,7 @@ package vehicles;
 
 import cars.Person;
 
-public class Vehicle {
+public abstract class Vehicle {
     protected String brand;
     protected String color;
     protected boolean started = false;
@@ -52,5 +52,14 @@ public class Vehicle {
 
     public void setOwner(Person owner) {
         this.owner = owner;
+    }
+
+    @Override
+    public String toString() {
+        return brand + " " + color + " ("
+                + (started ? "engine started" : "engine off")
+                + "), [Owner: "
+                + (owner != null ? owner : "no owner assigned")
+                + "]";
     }
 }

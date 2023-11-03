@@ -18,6 +18,6 @@ public class ElectricCar extends Vehicle {
 
     @Override
     public String toString() {
-        return "Electric Car " + super.color + " " + super.brand + ", " + batteryLevel + "% battery";
+        return "Electric Car " + super.toString() + ", " + batteryLevel + "% battery";
     }
 }

@@ -18,7 +18,7 @@ public class Truck extends Vehicle {
 
     @Override
     public String toString() {
-        String s = "Truck " + super.color + " " + super.brand + ", ";
+        String s = "Truck " + super.toString() + ", ";
         s += loadedStuff == null ? "unloaded" : ("loaded with " + loadedStuff);
         return s;
     }
